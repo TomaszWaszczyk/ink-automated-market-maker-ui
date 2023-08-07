@@ -1,5 +1,5 @@
 [package]
-name = "wasm-dex-ui"
+name = "WebAssembly Decentralized Exchange"
 version = "0.1.0"
 edition = "2021"
 
