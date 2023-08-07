@@ -2,6 +2,6 @@
 
 Hot reload:
 
-``
+```
 dx serve --hot-reload
 ```
