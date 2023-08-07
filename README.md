@@ -1,6 +1,6 @@
 # ink-automated-market-maker-ui
 
-Hot reload:
+Useful commands:
 
 ```
 dx serve --hot-reload
