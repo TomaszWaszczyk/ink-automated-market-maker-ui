@@ -6,6 +6,10 @@ fn main() {
     dioxus_web::launch(App);
 }
 
+// pub enum Route {
+//     #[layout(HeaderFooter)]
+// }
+
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         div {
