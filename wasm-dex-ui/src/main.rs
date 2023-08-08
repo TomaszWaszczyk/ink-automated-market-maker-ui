@@ -41,6 +41,7 @@ fn Index(cx: Scope) -> Element {
 
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
+        h1 { "Index" },
         div {
             background_color: "#d2d0d2" 
         }
