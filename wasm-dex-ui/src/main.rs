@@ -40,12 +40,25 @@ fn Index(cx: Scope) -> Element {
 }
 
 fn App(cx: Scope) -> Element {
+    let token_a = use_state(cx, || "token_a".to_string());
+
     cx.render(rsx! {
         h1 { "Index" },
         div {
             background_color: "#d2d0d2" 
         }
 
-        "Hello, wasm dex!"
+        div {
+            class: "flex flex-col h-screen items-center",
+            a {
+                "test"
+            }
+        }
+
+        input {
+            value: "{ token_a }",
+            oninput: move |event| token_a.set(event.value.clone()),
+        }
+
     })
 }
