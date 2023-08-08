@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 // get access to the `rsx!` macro and the `Scope` and `Element` types
 use dioxus::prelude::*;
+use dioxus_router::prelude::*;
 use log::LevelFilter;
 
 
@@ -12,13 +13,31 @@ fn main() {
     dioxus_web::launch(App);
 }
 
-// #[derive(Routable, Clone)]
-// #[rustfmt::skip]
-// enum Route {
-//     #[layout(Wrapper)]
-//         #[route("/")]
-//         Index {},
-// }
+#[inline_props]
+fn Wrapper(cx: Scope) -> Element {
+    render! {
+        header { "header" }
+        // The index route will be rendered here
+        Outlet::<Route> { }
+        footer { "footer" }
+    }
+}
+
+
+#[derive(Routable, Clone)]
+#[rustfmt::skip]
+enum Route {
+    #[layout(Wrapper)]
+        #[route("/")]
+        Index {},
+}
+
+#[inline_props]
+fn Index(cx: Scope) -> Element {
+    render! {
+        h1 { "Index" }
+    }
+}
 
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
