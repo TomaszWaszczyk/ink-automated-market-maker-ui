@@ -3,6 +3,7 @@
 use dioxus::prelude::*;
 use log::LevelFilter;
 
+
 fn main() {
     dioxus_logger::init(LevelFilter::Info).expect("Failed to initialize logger");
     console_error_panic_hook::set_once();
@@ -11,8 +12,12 @@ fn main() {
     dioxus_web::launch(App);
 }
 
-// pub enum Route {
-//     #[layout(HeaderFooter)]
+// #[derive(Routable, Clone)]
+// #[rustfmt::skip]
+// enum Route {
+//     #[layout(Wrapper)]
+//         #[route("/")]
+//         Index {},
 // }
 
 fn App(cx: Scope) -> Element {
