@@ -41,6 +41,7 @@ fn Index(cx: Scope) -> Element {
 
 fn App(cx: Scope) -> Element {
     let token_a = use_state(cx, || "token_a".to_string());
+    let token_b = use_state(cx, || "token_b".to_string());
 
     cx.render(rsx! {
         h1 { "Index" },
@@ -58,6 +59,11 @@ fn App(cx: Scope) -> Element {
         input {
             value: "{ token_a }",
             oninput: move |event| token_a.set(event.value.clone()),
+        }
+
+        input {
+            value: "{ token_b }",
+            oninput: move |event| token_b.set(event.value.clone()),
         }
 
     })
