@@ -4,6 +4,13 @@ use dioxus::prelude::*;
 use dioxus_router::prelude::*;
 use log::LevelFilter;
 
+#[derive(PartialEq)]
+pub enum ExchangeState {
+    Started,
+    InProgress,
+    Completed,
+}
+
 
 fn main() {
     dioxus_logger::init(LevelFilter::Info).expect("Failed to initialize logger");
@@ -42,6 +49,8 @@ fn Index(cx: Scope) -> Element {
 fn App(cx: Scope) -> Element {
     let token_a = use_state(cx, || "token_a".to_string());
     let token_b = use_state(cx, || "token_b".to_string());
+    let test = use_ref(cx, String::new);
+    let swap_id = use_state(cx, || 0);
 
     cx.render(rsx! {
         h1 { "Index" },
