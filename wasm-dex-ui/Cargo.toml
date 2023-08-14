@@ -12,4 +12,5 @@ dioxus-router = "0.4.1"
 # Debug and tooling dependencies
 log = "0.4.19"
 dioxus-logger = "0.4.1"
+dioxus-autofmt = "0.4.0"
 console_error_panic_hook = "0.1.7"
