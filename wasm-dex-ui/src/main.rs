@@ -13,6 +13,8 @@ pub enum ExchangeState {
 
 
 fn main() {
+    let view = dioxus_liveview::LiveViewPool::new();
+
     dioxus_logger::init(LevelFilter::Info).expect("Failed to initialize logger");
     console_error_panic_hook::set_once();
 
