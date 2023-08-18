@@ -51,8 +51,8 @@ fn Index(cx: Scope) -> Element {
 fn App(cx: Scope) -> Element {
     let token_a = use_state(cx, || "token_a".to_string());
     let token_b = use_state(cx, || "token_b".to_string());
-    let test = use_ref(cx, String::new);
-    let swap_id = use_state(cx, || 0);
+    let _test = use_ref(cx, String::new);
+    let _swap_id = use_state(cx, || 0);
 
     cx.render(rsx! {
         h1 { "Index" },

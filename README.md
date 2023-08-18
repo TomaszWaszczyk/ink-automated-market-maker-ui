@@ -6,6 +6,8 @@ Useful commands:
 
 ```
 dx serve --hot-reload
+
+dx build --features web --release
 ```
 # License
 
