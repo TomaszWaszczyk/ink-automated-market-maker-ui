@@ -10,6 +10,8 @@ dx serve --hot-reload
 dx build --features web --release
 
 dx build --features web --release
+
+dx build --features ssr --release
 ```
 
 # License

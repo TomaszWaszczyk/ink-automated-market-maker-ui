@@ -1,6 +1,4 @@
 [application]
-
-# dioxus project name
 name = "ammapp"
 
 # default platfrom
@@ -15,9 +13,8 @@ out_dir = "dist"
 asset_dir = "public"
 
 [web.app]
-
 # HTML title tag content
-title = "dioxus | ⛺"
+title = "💫 Heraklith Exchange"
 
 [web.watcher]
 
