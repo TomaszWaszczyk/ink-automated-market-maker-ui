@@ -27,7 +27,7 @@ fn Wrapper(cx: Scope) -> Element {
     render! {
         header { "header" }
         // The index route will be rendered here
-        Outlet::<Route> { }
+        Outlet::<Route> {}
         footer { "footer" }
     }
 }
@@ -43,9 +43,7 @@ enum Route {
 
 #[inline_props]
 fn Index(cx: Scope) -> Element {
-    render! {
-        h1 { "Index" }
-    }
+    render! { h1 { "Index" } }
 }
 
 fn AmmApp(cx: Scope) -> Element {
@@ -56,29 +54,15 @@ fn AmmApp(cx: Scope) -> Element {
 
     cx.render(rsx! {
         section { class: "ammapp",
-        style { include_str!("../styles/main.css")}
+            style { include_str!("../styles/main.css") }
         }
-        h1 { "Heraklith Decentralized Exchange" },
-        div {
-            background_color: "#d2d0d2" 
-        }
+        h1 { "Heraklith Decentralized Exchange" }
+        div { background_color: "#d2d0d2" }
 
-        div {
-            class: "flex flex-col h-screen items-center",
-            a {
-                "test"
-            }
-        }
+        div { class: "flex flex-col h-screen items-center", a { "test" } }
 
-        input {
-            value: "{ token_a }",
-            oninput: move |event| token_a.set(event.value.clone()),
-        }
+        input { value: "{ token_a }", oninput: move |event| token_a.set(event.value.clone()) }
 
-        input {
-            value: "{ token_b }",
-            oninput: move |event| token_b.set(event.value.clone()),
-        }
-
+        input { value: "{ token_b }", oninput: move |event| token_b.set(event.value.clone()) }
     })
 }

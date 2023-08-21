@@ -1,7 +1,7 @@
 [application]
 
 # dioxus project name
-name = "dioxus-cli"
+name = "ammapp"
 
 # default platfrom
 # you can also use `dx serve/build --platform XXX` to use other platform
