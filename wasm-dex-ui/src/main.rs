@@ -58,7 +58,7 @@ fn AmmApp(cx: Scope) -> Element {
         section { class: "ammapp",
         style { include_str!("../styles/main.css")}
         }
-        h1 { "Index" },
+        h1 { "Heraklith Decentralized Exchange" },
         div {
             background_color: "#d2d0d2" 
         }
