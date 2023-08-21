@@ -19,7 +19,7 @@ fn main() {
     console_error_panic_hook::set_once();
 
     log::info!("Starting WebAssembly Decentralized Exchange");
-    dioxus_web::launch(App);
+    dioxus_web::launch(AmmApp);
 }
 
 #[inline_props]
@@ -48,13 +48,16 @@ fn Index(cx: Scope) -> Element {
     }
 }
 
-fn App(cx: Scope) -> Element {
+fn AmmApp(cx: Scope) -> Element {
     let token_a = use_state(cx, || "token_a".to_string());
     let token_b = use_state(cx, || "token_b".to_string());
     let _test = use_ref(cx, String::new);
     let _swap_id = use_state(cx, || 0);
 
     cx.render(rsx! {
+        section { class: "ammapp",
+        style { include_str!("../styles/main.css")}
+        }
         h1 { "Index" },
         div {
             background_color: "#d2d0d2" 
